@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "antd";
 import { useGetPostsQuery } from "../Api/Posts";
+import { useGetPhotosQuery } from "../Api/Photos";
 
 const columns = [
   {
@@ -12,6 +13,7 @@ const columns = [
     title: "Name",
     dataIndex: "name",
     key: "name",
+    render: (text) => <a>{text}</a>,
   },
   {
     title: "E-mail",
@@ -21,7 +23,10 @@ const columns = [
 ];
 
 function OwnTable() {
-  const { data = [], isLoading } = useGetPostsQuery();
+  const { data: data, isLoading: isLoading } = useGetPostsQuery();
+
+  const { data: list } = useGetPhotosQuery();
+  console.log(list.slice(0, 500));
 
   if (isLoading) return <h1>Loading ...</h1>;
 

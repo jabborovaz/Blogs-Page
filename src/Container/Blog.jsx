@@ -1,4 +1,5 @@
 import React from "react";
+import { Row, Col } from "antd";
 import OwnTable from "../Component/OwnTable";
 
 function Blog() {
@@ -9,7 +10,11 @@ function Blog() {
           Posts
         </h2>
         <div className="pt-8">
-          <OwnTable />
+          <Row>
+            <Col xs={24} md={{ span: 16, offset: 4 }}>
+              <OwnTable />
+            </Col>
+          </Row>
         </div>
       </div>
     </div>
