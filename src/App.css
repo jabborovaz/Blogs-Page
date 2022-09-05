@@ -39,3 +39,23 @@
     transform: rotate(360deg);
   }
 }
+
+.ant-table-pagination.ant-pagination {
+  margin: 30px 0 !important;
+}
+
+.ant-table-pagination-right {
+  justify-content: center !important;
+}
+
+.ant-pagination-item {
+  min-width: 25px;
+}
+
+.ant-spin {
+  color: white !important;
+}
+
+.ant-image-preview-img {
+  display: inline-block !important;
+}
